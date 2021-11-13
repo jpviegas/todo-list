@@ -2,5 +2,133 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-size: 100%;
+}
+
+body {
+  background-image: linear-gradient(90deg, lightblue, navy);
+  color: whitesmoke;
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  font-size: 1.5rem;
+}
+
+header,
+form {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-height: 20vh;
+}
+
+form input,
+form button {
+  background: whitesmoke;
+  border: none;
+  font-size: 2rem;
+  padding: 0.5rem;
+}
+
+form button {
+  background: whitesmoke;
+  color: lightblue;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+form button:hover {
+  background: lightblue;
+  color: whitesmoke;
+}
+
+.todo-container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.todo-list {
+  list-style: none;
+  min-width: 30%;
+}
+
+.todo {
+  align-items: center;
+  background: whitesmoke;
+  color: black;
+  display: flex;
+  font-size: 1.5rem;
+  justify-content: space-between;
+  margin: 0.5rem;
+  transition: all 0.4s ease;
+}
+
+.todo li {
+  flex: 1;
+}
+
+.trash-btn,
+.complete-btn {
+  background: red;
+  border: none;
+  color: whitesmoke;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 1rem;
+}
+
+.complete-btn {
+  background: green;
+}
+
+.todo-item {
+  padding: 0 0.5rem;
+}
+
+.fa-trash,
+.fa-check {
+  pointer-events: none;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 50%;
+}
+
+.fall {
+  transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0%;
+}
+
+select {
+  appearance: none;
+  border: none;
+  color: #ff6f47;
+  cursor: pointer;
+  outline: none;
+  padding: 1rem;
+  width: 10rem;
+}
+
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.select::after {
+  background: #ff6f47;
+  content: "\25BC";
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  pointer-events: none;
+  position: absolute;
+  transition: all 0.3s ease;
+}
+
+.select:hover::after {
+  background: whitesmoke;
+  color: #ff6f47;
 }
